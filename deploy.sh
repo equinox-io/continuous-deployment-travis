@@ -11,4 +11,4 @@ tar -vxf release-tool-stable-linux-amd64.tgz
         --platforms="darwin_amd64 linux_amd64 windows_amd64" \
         --signing-key="equinox.key.enc" \
         --token="$EQUINOX_API_TOKEN" \
-        .
+        . -- -ldflags "-X main.version $TRAVIS_COMMIT"
