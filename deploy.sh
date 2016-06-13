@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux -o pipefail
+set -eu -o pipefail
 
 env | sort | uniq | grep "GO"
 
@@ -11,6 +11,6 @@ tar -vxf release-tool-stable-linux-amd64.tgz
         --version="$TRAVIS_COMMIT" \
         --app="app_4xCaMumNoeF" \
         --platforms="darwin_amd64 linux_amd64 windows_amd64" \
-        --signing-key="equinox.key.enc" \
+        --signing-key="equinox.key" \
         --token="$EQUINOX_API_TOKEN" \
         . -- -ldflags "-X main.version $TRAVIS_COMMIT"
