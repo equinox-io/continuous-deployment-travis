@@ -8,6 +8,7 @@ before_install:
   -in equinox.key.enc -out equinox.key -d
 gobuild_args: -ldflags "-X main.version $TRAVIS_COMMIT"
 deploy:
+  skip_cleanup: true
   provider: script
   script: scripts/deploy.sh
   on:

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eo pipefail
+set -eux -o pipefai
 
 # Download and unpack the most recent Equinox release tool
 wget https://bin.equinox.io/c/mBWdkfai63v/release-tool-stable-linux-amd64.tgz
