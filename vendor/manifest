@@ -1,0 +1,13 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/equinox-io/equinox",
+			"repository": "https://github.com/equinox-io/equinox",
+			"vcs": "git",
+			"revision": "6f97d0d3970881d3e53dd6f547a41109eb055e54",
+			"branch": "master",
+			"notests": true
+		}
+	]
+}

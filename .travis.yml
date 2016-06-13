@@ -1,0 +1,10 @@
+language: go
+go:
+  - 1.6
+install:
+gobuild_args: -ldflags "-X main.version $TRAVIS_COMMIT"
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: develop
