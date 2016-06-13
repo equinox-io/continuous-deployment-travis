@@ -1,7 +1,11 @@
 language: go
 go:
-  - 1.6
-install:
+- 1.6
+env:
+- secure: "pgPgSMztWwGwEOqlzxWAohA0HFied7Ru2KKEj5kflbhIzH6gaj2FypHNx+UFHqr0N+Rl+RaLoalrrR4GaFOrEWbUXl4YpjcT45gC62UZNvUP9fj+5hrRci+t8KPzvFv2fJNKG54RoI+TSqV74X5SS4bC/ixYu6pKmO7PtwF0FXHmb8J8EbtLnpw3uIYWnknohH0P1arxfWt4z9q2vH139sGQhOyAmBTFTSOEPk1XxbbFKxEz+/pC48YUYvfr++5QM/d8IUUFcWP0rCTnAu0JGZg1ywZVH1f+AntMBwAFGOs29ubKMHk33kmRhvVgnHk17DWZHXx/bSqAmD8OLRoLrYJoJMRO0QFlLQA2/XMy4aKTwnEiHS4CXOlIvAHJ0nfZdusFPwizIUWqDmGiC7WYrGjB77z93uNlKDr0F8OLzpYHk8YI8cXEY0H36XESA3AtibgXxzu1YRLB7HrJ+777J3NBeiDOooewEm+zQ24WOdPi3qIeDZUOPttk9YNTcwEOe2/NhS6HbzXszPG6QyDo/Wj5K+gCNkdb/vLddbjIoekzh0awu2iI1IU60/5z5Nc9IV5UKGoxOLdw5daIv2NRP9DM6FoS2FntaVOX8sfkhNsj2xepDqeLnfvskyWHVM+orR1uRAEV93vwWZdsnUXtVJWFqloRt/wmd6geRuoMOGc="
+before_install:
+- openssl aes-256-cbc -K $encrypted_4814b291ff1d_key -iv $encrypted_4814b291ff1d_iv
+  -in equinox.key.enc -out equinox.key -d
 gobuild_args: -ldflags "-X main.version $TRAVIS_COMMIT"
 deploy:
   provider: script
