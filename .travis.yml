@@ -10,6 +10,6 @@ gobuild_args: -ldflags "-X main.version $TRAVIS_COMMIT"
 deploy:
   skip_cleanup: true
   provider: script
-  script: deploy.sh
+  script: ./deploy.sh
   on:
     branch: master
