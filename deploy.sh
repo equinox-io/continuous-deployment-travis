@@ -1,7 +1,5 @@
 #!/bin/bash
-set -eux -o pipefail
-
-env | sort | uniq | grep "ldflags"
+set -eu -o pipefail
 
 # Download and unpack the most recent Equinox release tool
 wget https://bin.equinox.io/c/mBWdkfai63v/release-tool-stable-linux-amd64.tgz
