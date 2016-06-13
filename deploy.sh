@@ -1,5 +1,7 @@
 #!/bin/bash
-set -eux -o pipefai
+set -eux -o pipefail
+
+env | sort | uniq | grep "GO"
 
 # Download and unpack the most recent Equinox release tool
 wget https://bin.equinox.io/c/mBWdkfai63v/release-tool-stable-linux-amd64.tgz
